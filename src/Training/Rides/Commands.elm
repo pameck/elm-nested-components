@@ -8,7 +8,7 @@ import Json.Decode.Pipeline exposing (decode, required)
 
 ridesUrl: String
 ridesUrl =
-  "http://localhost:4000/rides"
+  "http://localhost:4000/trainingRides"
 
 fetchRides : Cmd Msg
 fetchRides =

@@ -1,7 +1,12 @@
 {
-  "rides": [
+  "commutingRides": [
     { "id": 1, "distance": "5.4 km", "movingTime": "13:54", "averageSpeed": "23.4 km/h" },
     { "id": 2, "distance": "40.1 km", "movingTime": "1:55:49", "averageSpeed": "20.8 km/h" },
     { "id": 3, "distance": "9.1 km", "movingTime": "34:48", "averageSpeed": "15.7 km/h" }
+  ],
+  "trainingRides": [
+    { "id": 1, "distance": "10.8 km", "movingTime": "28:00", "averageSpeed": "23.4 km/h" },
+    { "id": 2, "distance": "20.05 km", "movingTime": "58:49", "averageSpeed": "20.8 km/h" },
+    { "id": 3, "distance": "18.1 km", "movingTime": "1:06:48", "averageSpeed": "15.7 km/h" }
   ]
 }
