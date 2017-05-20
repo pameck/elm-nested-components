@@ -8,5 +8,10 @@
     { "id": 1, "distance": "10.8 km", "movingTime": "28:00", "averageSpeed": "23.4 km/h" },
     { "id": 2, "distance": "20.05 km", "movingTime": "58:49", "averageSpeed": "20.8 km/h" },
     { "id": 3, "distance": "18.1 km", "movingTime": "1:06:48", "averageSpeed": "15.7 km/h" }
+  ],
+  "stats": [
+    { "description": "Avg Kms per week", "value": "40 km" },
+    { "description": "Avg Speed", "value": "20.3 km/h" },
+    { "description": "Avg Moving Time", "value": "24:00" }
   ]
 }
