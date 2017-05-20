@@ -1,15 +1,16 @@
 module Rides.State exposing (..)
 
 import Rides.Types exposing (..)
+import Rides.Commands exposing(fetchRides)
 
 initialModel : Model
 initialModel =
-  { rides = [Ride 0 "1 km" "1:00" "60 km/h"]
+  { rides = []
   }
 
 initialCommands : Cmd Msg
 initialCommands =
-    Cmd.none
+    fetchRides
 
 subscriptions : Model -> Sub Msg
 subscriptions model =
@@ -18,5 +19,7 @@ subscriptions model =
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
-      OnFetchRides response ->
+      OnFetchRides (Ok response) ->
           ( { model | rides = response }, Cmd.none )
+      OnFetchRides (Err response) ->
+          ( { model | rides = [] }, Cmd.none )

@@ -1,5 +1,7 @@
 module Rides.Types exposing (..)
 
+import Http
+
 type alias Model =
     { rides : List Ride }
 
@@ -11,4 +13,4 @@ type alias Ride =
   }
 
 type Msg
-  = OnFetchRides (List Ride)
+  = OnFetchRides (Result Http.Error (List Ride))
