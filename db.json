@@ -1,0 +1,7 @@
+{
+  "rides": [
+    { "id": 1, "distance": "5.4 km", "movingTime": "13:54", "averageSpeed": "23.4 km/h" },
+    { "id": 2, "distance": "40.1 km", "movingTime": "1:55:49", "averageSpeed": "20.8 km/h" },
+    { "id": 3, "distance": "9.1 km", "movingTime": "34:48", "averageSpeed": "15.7 km/h" }
+  ]
+}
