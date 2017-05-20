@@ -9,6 +9,5 @@ import Training.Rides.View as TrainingRides
 view: Model -> Html Msg
 view model =
   div []
-  [ Html.map RidesMsg (Rides.view model.rides)
-  , text "---------------------------------------"
+  [ Html.map CommutingRidesMsg (Rides.view model.commutingRides)
   , Html.map TrainingRidesMsg (TrainingRides.view model.trainingRides) ]

@@ -10,7 +10,7 @@ view : List Ride -> Html Msg
 view rides =
     div [class "panel panel-default"]
     [ div [class "panel-heading"]
-      [ text "Rides"]
+      [ text "Training Rides"]
     , table [class "table"]
       [ head
       , tbody []

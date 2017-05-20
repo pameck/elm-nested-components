@@ -1,13 +1,13 @@
 module Types exposing (..)
 
-import Commuting.Rides.Types as Rides
+import Commuting.Rides.Types as CommutingRides
 import Training.Rides.Types as TrainingRides
 
 type alias Model =
-  { rides: Rides.Model
+  { commutingRides: CommutingRides.Model
   , trainingRides: TrainingRides.Model
   }
 
 type Msg =
-  RidesMsg Rides.Msg
+  CommutingRidesMsg CommutingRides.Msg
   | TrainingRidesMsg TrainingRides.Msg

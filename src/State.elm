@@ -1,19 +1,19 @@
 module State exposing (..)
 
 import Types exposing (..)
-import Commuting.Rides.State as Rides
+import Commuting.Rides.State as CommutingRides
 import Training.Rides.State as TrainingRides
 
 initialModel : Model
 initialModel =
-  { rides = Rides.initialModel,
+  { commutingRides = CommutingRides.initialModel,
     trainingRides = TrainingRides.initialModel
   }
 
 initialCommands : Cmd Msg
 initialCommands =
   Cmd.batch [
-    Cmd.map RidesMsg Rides.initialCommands
+    Cmd.map CommutingRidesMsg CommutingRides.initialCommands
   , Cmd.map TrainingRidesMsg TrainingRides.initialCommands
   ]
 
@@ -24,12 +24,12 @@ init =
 update : Msg -> Model -> (Model, Cmd Msg)
 update msg model =
   case msg of
-    RidesMsg ridesMsg ->
+    CommutingRidesMsg commutingRidesMsg ->
       let
-        (ridesModel, ridesCmd) =
-          Rides.update ridesMsg model.rides
+        (commutingRidesModel, commutingRidesCmd) =
+          CommutingRides.update commutingRidesMsg model.commutingRides
       in
-        ( { model | rides = ridesModel }, Cmd.map RidesMsg ridesCmd)
+        ( { model | commutingRides = commutingRidesModel }, Cmd.map CommutingRidesMsg commutingRidesCmd)
 
     TrainingRidesMsg trainingRidesMsg ->
       let
