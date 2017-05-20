@@ -1,5 +1,9 @@
 module Types exposing (..)
 
-type alias Model = String
+import Rides.Types as Rides
 
-type Msg = NoOp
+type alias Model =
+  { rides: Rides.Model }
+
+type Msg =
+  RidesMsg Rides.Msg

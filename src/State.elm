@@ -1,16 +1,32 @@
 module State exposing (..)
 
 import Types exposing (..)
+import Rides.State as Rides
 
-init : (Model, Cmd Msg)
+initialModel : Model
+initialModel =
+  { rides = Rides.initialModel
+  }
+
+initialCommands : Cmd Msg
+initialCommands =
+  Cmd.batch [
+    Cmd.map RidesMsg Rides.initialCommands
+  ]
+
+init: (Model, Cmd Msg)
 init =
-  ("Hello", Cmd.none)
+  (initialModel, initialCommands)
 
 update : Msg -> Model -> (Model, Cmd Msg)
 update msg model =
   case msg of
-    NoOp ->
-      (model, Cmd.none)
+    RidesMsg ridesMsg ->
+      let
+        (ridesModel, ridesCmd) =
+          Rides.update ridesMsg model.rides
+      in
+        ( { model | rides = ridesModel }, Cmd.map RidesMsg ridesCmd)
 
 subscriptions: Model -> Sub Msg
 subscriptions model =
