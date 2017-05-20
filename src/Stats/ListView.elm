@@ -11,7 +11,7 @@ view statsList =
     div [class "panel panel-default"]
     [ div [class "panel-heading"]
       [ text "Stats"]
-    , table [class "table"]
+    , table [class "table table-striped table-bordered table-hover"]
       [ head
       , tbody []
         (map row statsList)

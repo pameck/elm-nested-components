@@ -11,7 +11,7 @@ view rides =
     div [class "panel panel-default"]
     [ div [class "panel-heading"]
       [ text "Commuting Rides"]
-    , table [class "table"]
+    , table [class "table table-striped table-bordered table-hover"]
       [ head
       , tbody []
         (map row rides)
