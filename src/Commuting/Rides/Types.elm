@@ -1,4 +1,4 @@
-module Rides.Types exposing (..)
+module Commuting.Rides.Types exposing (..)
 
 import Http
 

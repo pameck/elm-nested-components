@@ -1,7 +1,7 @@
-module Rides.Commands exposing (fetchRides)
+module Commuting.Rides.Commands exposing (fetchRides)
 
 import Http
-import Rides.Types exposing (..)
+import Commuting.Rides.Types exposing (..)
 
 import Json.Decode as Decode
 import Json.Decode.Pipeline exposing (decode, required)

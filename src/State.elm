@@ -1,7 +1,7 @@
 module State exposing (..)
 
 import Types exposing (..)
-import Rides.State as Rides
+import Commuting.Rides.State as Rides
 
 initialModel : Model
 initialModel =

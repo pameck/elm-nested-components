@@ -3,7 +3,7 @@ module View exposing (..)
 import Html exposing (Html, text)
 
 import Types exposing (..)
-import Rides.View as Rides
+import Commuting.Rides.View as Rides
 
 view: Model -> Html Msg
 view model =

@@ -1,7 +1,7 @@
-module Rides.State exposing (..)
+module Commuting.Rides.State exposing (..)
 
-import Rides.Types exposing (..)
-import Rides.Commands exposing(fetchRides)
+import Commuting.Rides.Types exposing (..)
+import Commuting.Rides.Commands exposing(fetchRides)
 
 initialModel : Model
 initialModel =

@@ -1,6 +1,6 @@
 module Types exposing (..)
 
-import Rides.Types as Rides
+import Commuting.Rides.Types as Rides
 
 type alias Model =
   { rides: Rides.Model }

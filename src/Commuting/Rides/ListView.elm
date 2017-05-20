@@ -1,10 +1,10 @@
-module Rides.ListView exposing (..)
+module Commuting.Rides.ListView exposing (..)
 
 import Html exposing (Html, div, text, p, table, thead, tbody, tr, th, td)
 import Html.Attributes exposing (class, style)
 import List exposing (map)
 
-import Rides.Types exposing (..)
+import Commuting.Rides.Types exposing (..)
 
 view : List Ride -> Html Msg
 view rides =
